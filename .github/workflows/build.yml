@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -33,7 +33,7 @@ jobs:
           cp Firmware/.pio/build/rp2354/firmware.uf2 output/EMI_sniffer.uf2
 
       - name: Upload UF2 file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: EMI_sniffer
           path: output/EMI_sniffer.uf2
